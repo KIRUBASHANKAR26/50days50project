@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    color: #000;
+    overflow-x: hidden;
+    background-color: #000;
+}
+.container{
+    background-color: #fafafa;
+    transform-origin: top left;
+    transition: transform .5s linear;
+}
+.menu div{
+    width: 25px;
+    height: 4px;
+    margin: 5px;
+    background-color: #000;
+}
+.menu{
+    padding: 1rem;
+}
+section{
+    padding: 0% 20%;
+}
+section h2{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+section p{
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+section img{
+    width: 100%;
+    margin-bottom: 1rem;
+}
+section h3{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.circle-container{
+    position: fixed;
+    top: -100px;
+    left: -100px;
+}
+.circle{
+    background-color: #ff7979;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: relative;
+    transition: transform .5s linear;
+}
+.circle button{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100px;
+    background: transparent;
+    border: 0;
+    font-size: 26px;
+    color: #fff;
+}
+.circle button#close {
+    top: 60%;
+    transform: rotate(90deg);
+    transform-origin: top left;
+}
+.circle button#open {
+    left: 60%;
+}
+nav{
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+    z-index: 100;
+}
+nav ul{
+    list-style-type: none;
+    padding-left: 30px;
+}
+nav ul li{
+    color: #fff;
+    margin-top: 2rem;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+.container.show{
+    transform: rotate(-20deg);
+}
+.container.show .circle{
+    transform: rotate(-70deg);
+}
